@@ -92,7 +92,7 @@ RUN git clone https://github.com/Genesis-Embodied-AI/Genesis.git && \
     pip install . && \
     pip install --no-cache-dir PyOpenGL==3.1.5
 
-# -------------------- Surface Reconstruction --------------------
+# -------------------- Surface Reconstruction -------------------- 
 # Set the LD_LIBRARY_PATH directly in the environment
 COPY --from=builder /workspace/Genesis/genesis/ext/ParticleMesher/ParticleMesherPy /opt/conda/lib/python3.11/site-packages/genesis/ext/ParticleMesher/ParticleMesherPy
 ENV LD_LIBRARY_PATH=/opt/conda/lib/python3.11/site-packages/genesis/ext/ParticleMesher/ParticleMesherPy:$LD_LIBRARY_PATH
